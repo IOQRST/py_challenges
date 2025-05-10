@@ -1,0 +1,1 @@
+lst = [input() for _ in '.....']
