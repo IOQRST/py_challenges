@@ -1,6 +1,6 @@
-from typing import Iterator
+from collections.abc import Generator
 
-def cyrillic_characters(s: str) -> Iterator[str]:
+def cyrillic_characters(s: str) -> Generator[str]:
     if not s:
         return
     

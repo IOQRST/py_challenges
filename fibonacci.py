@@ -1,6 +1,6 @@
-from typing import Iterator
+from collections.abc import Generator
 
-def fibonacci(n: int) -> Iterator[int]:
+def fibonacci(n: int) -> Generator[int]:
     a = 0
     b = 1
     

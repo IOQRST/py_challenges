@@ -1,6 +1,6 @@
-from typing import Iterator
+from collections.abc import Generator
 
-def even_numbers(n: int) -> Iterator[int]:
+def even_numbers(n: int) -> Generator[int]:
     if n < 0:
         return
 

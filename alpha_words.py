@@ -1,8 +1,8 @@
-from typing import Iterator
+from collections.abc import Generator
 import re
 
 
-def alpha_words(s: str) -> Iterator[str]:
+def alpha_words(s: str) -> Generator[str]:
     for word in re.findall(r'[a-zA-Zа-яА-Я]+', s):
         if re.match(r"^[a-zа-я]+$", word.lower()):
             yield word

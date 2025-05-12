@@ -1,6 +1,6 @@
-from typing import Iterator
+from collections.abc import Generator
 
-def unique_chars(s: str) -> Iterator[str]:
+def unique_chars(s: str) -> Generator[str]:
     seen = set()
     
     if not s:

@@ -1,6 +1,6 @@
-from typing import Iterator
+from collections.abc import Generator
 
-def squares(number: int) -> Iterator[int]:
+def squares(number: int) -> Generator[int]:
     if number < 0:
         raise ValueError("Input must be non-negative")
     

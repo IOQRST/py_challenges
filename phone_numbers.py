@@ -1,8 +1,8 @@
-from typing import Iterator
+from collections.abc import Generator
 import re
 
 
-def phone_numbers(text: str) -> Iterator[str]:
+def phone_numbers(text: str) -> Generator[str]:
     pattern = r'\+\d-\d{3}-\d{3}-\d{4}|\+\d{11}'
     for number in re.findall(pattern, text):
         yield number

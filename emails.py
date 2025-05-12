@@ -1,8 +1,8 @@
-from typing import Iterator
+from collections.abc import Generator
 import re
 
 
-def emails(text: str) -> Iterator[str]:
+def emails(text: str) -> Generator[str]:
     for address in re.findall(r"[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", text):
         yield address
 

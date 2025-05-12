@@ -1,8 +1,8 @@
-from typing import Iterator
+from collections.abc import Generator
 import re
 
 
-def long_words(text: str, min_len: int) -> Iterator[str]:
+def long_words(text: str, min_len: int) -> Generator[str]:
     for word in re.findall(r"[a-zA-Zа-яА-ЯёЁ]+", text):
         if len(word) >= min_len:
             yield word

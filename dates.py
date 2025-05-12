@@ -1,8 +1,8 @@
-from typing import Iterator
+from collections.abc import Generator
 import re
 
 
-def dates(text: str) -> Iterator[str]:
+def dates(text: str) -> Generator[str]:
     pattern = r'(0[1-9]|[12]\d|3[01])\.(0[1-9]|1[0-2])\.\d{4}'
     for date in re.findall(pattern, text):
         yield date
